@@ -1,0 +1,68 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <style>
+    #results-container {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      height: 27vh;
+    }
+    .result {
+      background-color: green;
+      text-align: center;
+      align-items: center;
+      display: grid;
+      border-radius: 5px;
+    }
+
+    #search-container {
+      padding-bottom: 10px;
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: ".  sc .";
+      display: grid;
+    }
+    #sc {
+      grid-area: sc;
+    }
+    .search-btn {
+      display: grid;
+      display: inline;
+      border: solid black;
+      border-radius: 4px;
+    }
+    #input {
+      border-radius: 3px;
+    }
+  </style>
+  <body>
+    <div id="search-container">
+      <div id="sc">
+        <input id="input" type="text" placeholder="What are you looking for?" />
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+    <div id="results-container">
+      <div class="result">First thing</div>
+      <div class="result">Second thing</div>
+      <div class="result">Third thing</div>
+      <div class="result">Fourth thing</div>
+    </div>
+
+    <script src="" async defer></script>
+  </body>
+</html>

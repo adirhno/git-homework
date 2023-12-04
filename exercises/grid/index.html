@@ -1,0 +1,101 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <style>
+    #container {
+      display: grid;
+      /* grid-gap: 10px; */
+      height: 100vh;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-areas: "sn c c c c";
+      
+    }
+    .nam {
+      background-color: #99417c;
+      text-align: left;
+    }
+
+    #side-nav {
+      display: grid;
+      grid-area: sn;
+      width: 100%;
+   
+    }
+    #chat {
+      display: grid;
+      grid-area: c;
+      padding-left: 4px;  
+    
+
+    }
+    .end {
+      justify-content: end;
+      display: grid;
+    }
+
+    .outMesseage {
+      height: 30%;
+      background-color: grey;
+      border-radius: 3px;
+      display: grid;
+      align-items: center;
+      width: fit-content;
+      padding-left: 3px;
+    }
+
+    .inMessage {
+      height: 30%;
+      display: grid;
+      background-color: rgb(38, 196, 75);
+      border-radius: 3px;
+      align-items: center;
+    }
+
+    .innerNam {
+      width: 100%;
+      display: block;
+      background-color: #be6ea4;
+    }
+    .time{
+      display: grid;
+      justify-content:end;
+      font-size: small;
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <div id="side-nav">
+        <div class="nam"><strong>Friends</strong></div>
+        <div class="nam"><span class="innerNam">First</span></div>
+        <div class="nam"><span class="innerNam">Second</span></div>
+        <div class="nam"><span class="innerNam">Third</span></div>
+        <div class="nam"><span class="innerNam">Fourth</span></div>
+      </div>
+      <div id="chat">
+        <div class="chat"><span class="outMesseage">Hey<span class="time">12:12</span></div>
+        <div class="chat"><span class="outMesseage">Hello?<span class="time">12:12</span></span></div>
+        <div class="end"><span class="inMessage">sorry,been busy<span class="time">12:12</span></span></div>
+        <div class="chat">
+          <span class="outMesseage">you work too much<span class="time">12:12</span></span>
+        </div>
+        <div class="end"><span class="inMessage">tell me about it<span class="time">12:12</span></span></div>
+      </div>
+    </div>
+  </body>
+  <script src="" async defer></script>
+</html>

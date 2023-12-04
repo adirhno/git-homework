@@ -1,0 +1,38 @@
+[
+  {
+    "name": "cow",
+    "weigh": "200kg",
+    "location": "farm",
+    "endangered": false,
+    "kind of foods": "2",
+    "other animal same food": "horse",
+    "delicious ": 5
+  },
+  {
+    "name": "Elephant",
+    "weigh": "1100kg",
+    "location": "jungle",
+    "endangered": false,
+    "kind of foods": "1",
+    "other animal same food": "none",
+    "delicious ": 1
+  },
+  {
+    "name": "Gray Wolf",
+    "weigh": "60kg",
+    "location": "jungle",
+    "endangered": false,
+    "kind of foods": "1",
+    "other animal same food": "none",
+    "delicious ": 1
+  },
+  {
+    "name": "Squirrel",
+    "weigh": "2kg",
+    "location": "sea",
+    "endangered": false,
+    "kind of foods": "1",
+    "other animal same food": "none",
+    "delicious ": 1
+  }
+]
