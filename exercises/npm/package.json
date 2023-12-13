@@ -1,0 +1,17 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^6.6.6",
+    "jQuery": "^1.7.4",
+    "urllib": "^3.21.0",
+    "validator": "^13.11.0"
+  },
+  "description": ""
+}
