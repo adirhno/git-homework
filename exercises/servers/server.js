@@ -1,20 +1,30 @@
 /** @format */
 
 const express = require("express");
+const { cpSync } = require("fs");
 const app = express();
+const path = require("path");
 
-app.get("/user/:userName", (req, res) => {
-  const users = {
-    tilda: "You've done a wonderful job",
-    riva: "You need to improve your form, but good perseverance",
-    jeremy: "You're incredible",
-  };
+app.use(express.static(path.join(__dirname, "node_modules")));
+app.use(express.static(path.join(__dirname, "public")));
 
-  res.send(`welcome ${users[req.params.userName]}`);
-});
+const data = {
+  8112: {
+    title: "Name of the Wind",
+    author: "Patrick Rothfuss",
+  },
+  9121: {
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+  },
+  1081: {
+    title: "The Giver",
+    author: "Lois Lowry",
+  },
+};
 
-app.get("/life", (req, res) => {
-  res.send("42");
+app.get("/book/:bookId", function (req, res) {
+  res.send(data[req.params.bookId]);
 });
 
 app.listen(3000, function () {
