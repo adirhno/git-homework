@@ -1,0 +1,22 @@
+{
+  "name": "git-homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classTask.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adirhno/git-homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adirhno/git-homework/issues"
+  },
+  "homepage": "https://github.com/adirhno/git-homework#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

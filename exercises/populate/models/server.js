@@ -17,6 +17,8 @@ const p2 = new Planet({ name: "earth", system: {}, Visitors: [] });
 const v1 = new Visitor({ name: "nill", homePlanet: {}, visitedPlanets: [] });
 const s1 = new Solar({ planets: [], starName: "oranos" });
 const s2 = new Solar({ planets: [], starName: "shavit" });
+
+
 s1.save();
 s2.save();
 p2.save();
