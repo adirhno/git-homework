@@ -1,4 +1,12 @@
+/** @format */
+
+import { useState } from "react";
 import "./App.css";
+import Company from "./components/Company";
+import Hot from "./components/Hot";
+import Cold from "./components/Cold";
+import Home from "./components/Home";
+import Landing from "./components/Landing";
 
 // function App() {
 //   const showCompany = (name, revenue) => { }
@@ -36,51 +44,127 @@ import "./App.css";
 // 	);
 // }
 
-function AboutUs() {
-	return <p>This is an example of an about us page~</p>;
+// function AboutUs() {
+// 	return <p>This is an example of an about us page~</p>;
+// }
+
+// function Nav() {
+// 	return (
+// 		<div id="nav">
+// 			<span>Home</span>
+// 			<span>About</span>
+// 		</div>
+// 	);
+// }
+
+// function LandingPage() {
+// 	return <h1>Welcome!</h1>;
+// }
+
+// function About() {
+// 	return (
+// 		<div>
+// 			<SignUp />
+// 			<Blurb />
+// 		</div>
+// 	);
+// }
+
+// function SignUp() {
+// 	return <div>its SignUp component</div>;
+// }
+
+// function Blurb() {
+// 	return <div>its Blurb component</div>;
+// }
+
+// function App() {
+	const companiesData =[
+		{ name: "Tesla", revenue: 140 },
+		{ name: "Microsoft", revenue: 300 },
+		{ name: "Google", revenue: 600 }
+  ]
+//   let [companies, setCompanies] = useState(companiesData)
+
+// 	localStorage["loggedIn"] = false;
+// 	let isUserLoggedIn = localStorage.getItem("loggedIn");
+// 	let componentToDisplay = isUserLoggedIn ? <LandingPage /> : <AboutUs />;
+
+// 	return (
+// 		<div className="app">
+// 			<Nav />
+// 			<About />
+// 			<button className="testBtn">Test</button>
+// 			{companiesData .map((c)=> <Company company={c} />)}
+// 		</div>
+// 	);
+// }
+
+// export default App;
+
+function Calendar({ reservations }) {
+  console.log(reservations.name);
+  return (
+    <div id="calendar">
+      {reservations.name + " has a reservation on " + reservations.day}
+    </div>
+  );
 }
 
-function Nav() {
-	return (
-		<div id="nav">
-			<span>Home</span>
-			<span>About</span>
-		</div>
-	);
+function Register() {
+  return <div id="register">{/* your code here */}</div>;
 }
 
-function LandingPage() {
-	return <h1>Welcome!</h1>;
-}
+const App = () => {
+  //   const [toggle, setToggle] = useState(false);
+  //   const [count, setCount] = useState(0);
 
-function About() {
-	return (
-		<div>
-			<SignUp />
-			<Blurb />
-		</div>
-	);
-}
+  //   const toggleBtn = () => {
+  //     toggle == false ? setToggle(true) : setToggle(false);
+  //   };
+  //   const likeBtn = () => {
+  //     setCount(count + 1);
+  //     console.log(count);
+  //   };
 
-function SignUp() {
-	return <div>its SignUp component</div>;
-}
+  const data = {
+    user: "Robyn",
+    store: [
+      { item: "XSPS Pro Player", price: 800, discount: 0.2, hottest: false },
+      { item: "Gizem Backwatch", price: 230, discount: 0.6, hottest: false },
+      {
+        item: "Surround Sound Pelican",
+        price: 3099,
+        discount: 0.05,
+        hottest: true,
+      },
+    ],
+    shouldDiscount: false,
+    currentPage: "Landing",
+  };
+//   const [currentPage,setCurrentPage]=useState("Home")
 
-function Blurb() {
-	return <div>its Blurb component</div>;
-}
+//   const findHottest =function() {
+//     let hottest = data.store[0].price;
+//     for (let i = 1; i <= data.store.length-1; i++) {
+//       hottest > data.store[i].price ? (hottest = hottest) : (hottest = data.store[i].price);
+//     }
+//     return hottest;
+//   };
+//   const handleSwich=()=>{
+// 	currentPage === "Landing"? setCurrentPage("Home"): setCurrentPage("Landing")
+//   }
 
-function App() {
-	localStorage["loggedIn"] = false;
-	let isUserLoggedIn = localStorage.getItem("loggedIn");
-	let componentToDisplay = isUserLoggedIn ? <LandingPage /> : <AboutUs />;
+  return (
+    <div>
+		{/* {currentPage === "Landing"?<Landing  name={data.user} hot={findHottest} />: <Home data={data} />}
+      <button onClick={handleSwich}>Switch</button>
+      <br></br> */}
 
-	return (
-		<div className="app">
-			<Nav />
-			<About />
-		</div>
-	);
-}
+	  <Company name={companiesData[0].name} />
+     
+    </div>
+  );
+};
 
 export default App;
